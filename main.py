@@ -97,8 +97,8 @@ def main():
     
     if datetime.now().weekday() in [5,6]:
         print('\nNon trading day! Disconnecting.')
-        client.disconnect()     
-        sys.exit()
+        client.disconnect()
+        return
     #===================================================
     # Find an expiration date just over a month away
     current_date = np.datetime64(datetime.now()).astype('M8[s]')
