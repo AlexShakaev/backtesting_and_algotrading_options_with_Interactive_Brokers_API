@@ -285,14 +285,14 @@ class Client(EWrapper, EClient):
                 self.current_price = price    
                 self.price_event.set()
         if req_id == 11:
-            if price != -1 or price != 0.0:
-                if tickType == 1:    
-                    self.bag_bid [req_id] = price
-                elif tickType == 2:
-                    self.bag_ask [req_id] = price                    
-                self.bag_event.set()
-            else:
-                print('Invalid price')
-                self.bag_event.set()                
-                return                                          
+            # if price != -1 or price != 0.0:
+            if tickType == 1:    
+                self.bag_bid [req_id] = price
+            elif tickType == 2:
+                self.bag_ask [req_id] = price                    
+            self.bag_event.set()
+            # else:
+            #     print('Invalid price')
+            #     self.bag_event.set()                
+            #     return                                          
  

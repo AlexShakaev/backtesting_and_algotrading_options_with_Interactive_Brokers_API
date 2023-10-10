@@ -137,7 +137,7 @@ def get_spread_price(client, bag_con):
     ''' Get mid price of spread '''   
     
     bag_price = 0
-    while not bag_price > 0:        
+    while not (bag_price > 0):        
         client.reqMktData(11, bag_con, "", False, False, [])    
         while not client.bag_event.is_set():
             # print('Getting spread price... \n')
