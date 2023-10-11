@@ -8,6 +8,7 @@ Bot buys call spread on SPY when close price > sma, exits after 5 days or when a
 * ibapi package 10.22
 * TWS or IB Gateway  
 * python 3.9 or later
+* pyqstrat
 
 ## usage
 
